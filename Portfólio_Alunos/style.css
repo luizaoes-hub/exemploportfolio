@@ -1,0 +1,366 @@
+/* Variáveis CSS (opcional, mas recomendado) */
+:root {
+  --dark-bg: #3e3e3b;
+  --card-bg: #121212;
+  --accent-purple: #952aff;
+  --accent-orange: #f9b234;
+  --text-white: #fff;
+  --text-dark: #000;
+}
+
+body {
+  background: var(--dark-bg);
+  color: var(--text-white); /* Define uma cor de texto padrão para o body */
+}
+
+/* --- Global Styles --- */
+.section-title {
+  font-size: 28px;
+  color: var(--text-white);
+  margin-bottom: 2rem;
+  font-style: oblique; /* Para "MINI-SITE" e "SOBRE" */
+}
+
+.section-title-italic {
+  font-size: 28px;
+  color: var(--text-white);
+  margin-bottom: 2rem;
+  font-style: italic; /* Para "DESIGN GRÁFICO" e "MARKETING DIGITAL" e "SITES" */
+}
+
+.section-description {
+  font-size: 16px;
+  color: var(--text-white);
+  margin-bottom: 0.7rem;
+}
+
+.custom-btn {
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: var(--accent-purple);
+  color: var(--text-white);
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #7b22d6; /* Um tom mais escuro do roxo */
+  color: var(--text-white);
+}
+
+.custom-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-card .card-img-top {
+  height: 325px; /* Altura fixa para as imagens dos cartões */
+  width: 100%;
+  display: block;
+  object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+}
+
+/* --- Header Section --- */
+.hero-section {
+  position: relative;
+  height: 800px; /* Ajuste conforme necessário */
+  background-color: var(--dark-bg);
+}
+
+.hero-background {
+  background-image: url(https://i.imgur.com/w7uHW1d.png);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  color: var(--text-white);
+  display: flex; /* Para alinhar o conteúdo verticalmente */
+  flex-direction: column; /* Para empilhar o conteúdo */
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  text-align: center;
+}
+
+.navbar.estilo-da-nav {
+  width: 100%;
+  background-color: whitesmoke;
+  border: 0px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0px;
+  top: 0; /* Certifica que a nav está no topo fixada */
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Garante que a nav fique acima de outros elementos */
+}
+
+.nav-links-left {
+  margin-left: 1%; /* Mantenha se for o alinhamento desejado */
+}
+
+.text-dark-nav {
+  color: var(--text-dark) !important;
+}
+
+.navbar-toggler {
+  color: var(--text-dark) !important;
+}
+
+.social-icons-right {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons-right svg {
+  color: var(--text-dark) !important; /* Ícones escuros na nav superior */
+  margin-left: 8px;
+}
+
+.hero-content {
+  margin-top: 150px; /* Ajuste para descer o conteúdo abaixo da navbar */
+  z-index: 2; /* Garante que o conteúdo fique acima do background */
+  position: relative;
+}
+
+.profile-photo {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%; /* Imagem de perfil redonda */
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 30px;
+  color: var(--text-white);
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: var(--text-white);
+}
+
+p {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: 100%;
+    width: 100%;
+  }
+}
+
+/* --- Cards Section (UX/UI, Design Gráfico, Marketing Digital) --- */
+.section-cards {
+  margin-top: -298px; /* Mantenha se esta for a intenção de layout */
+  padding-bottom: 50px; /* Espaçamento abaixo dos cards */
+}
+
+.ag-format-container {
+  width: 1142px;
+  margin: 0 auto;
+}
+
+.ag-courses_box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 50px 0;
+}
+
+.ag-courses_item {
+  flex-basis: calc(33.33333% - 30px);
+  margin: 0 15px 30px;
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.ag-courses-item_link {
+  display: block;
+  padding: 30px 20px;
+  background-color: var(--card-bg);
+  overflow: hidden;
+  position: relative;
+  text-decoration: none; /* Remover sublinhado padrão */
+  color: var(--text-white);
+}
+
+.ag-courses-item_link:hover {
+  color: var(--text-white);
+}
+
+.ag-courses-item_link:hover .ag-courses-item_bg {
+  transform: scale(10);
+}
+
+.ag-courses-item_title {
+  min-height: 87px;
+  margin: 0 0 25px;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--text-white);
+  z-index: 2;
+  position: relative;
+}
+
+.ag-courses-item_date-box {
+  font-size: 18px;
+  color: var(--text-white);
+  z-index: 2;
+  position: relative;
+}
+
+.ag-courses-item_date {
+  font-weight: bold;
+  color: var(--accent-orange);
+  transition: color .5s ease;
+}
+
+.ag-courses-item_bg {
+  height: 128px;
+  width: 128px;
+  background-color: var(--accent-orange);
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  border-radius: 50%;
+  transition: all .5s ease;
+}
+
+.ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+  background-color: var(--accent-purple);
+}
+
+.ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+  background-color: var(--accent-orange);
+}
+
+.ag-courses_item:nth-child(4n) .ag-courses-item_bg {
+  background-color: var(--accent-purple);
+}
+
+.ag-courses_item:nth-child(5n) .ag-courses-item_bg {
+  background-color: #cd3e94; /* Cor específica, considere uma variável */
+}
+
+.ag-courses_item:nth-child(6n) .ag-courses-item_bg {
+  background-color: #4c49ea; /* Cor específica, considere uma variável */
+}
+
+/* --- Mini Site Section --- */
+.section-content {
+  padding-bottom: 80px;
+}
+
+.section-content .img-fluid {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  margin-bottom: 20px; /* Espaço abaixo da imagem em mobile */
+}
+
+@media (min-width: 768px) {
+  .section-content .img-fluid {
+    float: left;
+    margin-right: 30px;
+  }
+}
+
+/* --- About Section --- */
+.section-about {
+  background-color: var(--text-dark); /* Fundo preto para a seção "Sobre" */
+  padding: 30px 0;
+}
+
+.profile-photo-about {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.section-title-about {
+  font-size: 28px;
+  color: var(--text-white);
+  font-style: oblique;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 16px;
+  color: var(--text-white);
+  line-height: 1.6;
+}
+
+.social-icons-bottom svg {
+  color: var(--text-white) !important; /* Ícones brancos na seção "Sobre" */
+  margin-left: 8px;
+  font-size: 2rem; /* Aumenta o tamanho dos ícones na seção "Sobre" */
+}
+.social-icons-bottom svg:first-child {
+  margin-left: 0; /* Remove a margem do primeiro ícone para alinhamento */
+}
+
+
+/* --- Media Queries (Revisadas e Organizadas) --- */
+@media only screen and (max-width: 979px) {
+  .ag-courses_item {
+    flex-basis: calc(50% - 30px);
+  }
+  .ag-courses-item_title {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ag-format-container {
+    width: 96%;
+  }
+  .section-content .img-fluid {
+    float: none; /* Remove float em telas menores */
+    margin: 0 auto 20px auto; /* Centraliza e adiciona espaço */
+    display: block;
+  }
+  .section-content .text-center {
+    text-align: center !important; /* Garante que o texto fique centralizado */
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .ag-courses_item {
+    flex-basis: 100%;
+  }
+  .ag-courses-item_title {
+    min-height: 72px;
+    line-height: 1;
+    font-size: 24px;
+  }
+  .ag-courses-item_link {
+    padding: 22px 40px;
+  }
+  .ag-courses-item_date-box {
+    font-size: 16px;
+  }
+  .hero-content {
+    margin-top: 100px; /* Ajuste para mobile */
+  }
+  .profile-photo {
+    height: 180px;
+    width: 180px;
+  }
+  .hero-title {
+    font-size: 24px;
+  }
+  .hero-subtitle {
+    font-size: 16px;
+  }
+  .section-title, .section-title-italic, .section-title-about {
+    font-size: 24px;
+  }
+}
